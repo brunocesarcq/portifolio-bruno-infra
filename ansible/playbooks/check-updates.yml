@@ -1,1 +1,32 @@
+---
+- name: Pre-check | Verificar atualizações disponíveis
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  tasks:
+    - name: Atualizar cache de pacotes (Debian/Ubuntu)
+      apt:
+        update_cache: yes
+      when: ansible_os_family == "Debian"
+
+    - name: Atualizar cache de pacotes (RHEL/Oracle)
+      dnf:
+        update_cache: yes
+      when: ansible_os_family == "RedHat"
+
+    - name: Listar pacotes com atualização disponível (Debian)
+      shell: apt list --upgradable
+      register: deb_updates
+      when: ansible_os_family == "Debian"
+
+    - name: Listar pacotes com atualização disponível (RedHat)
+      shell: dnf check-update || true
+      register: rhel_updates
+      when: ansible_os_family == "RedHat"
+
+    - name: Exibir atualizações encontradas
+      debug:
+        msg: |
+          {{ deb_updates.stdout if ansible_os_family == "Debian" else rhel_updates.stdout }}
 
