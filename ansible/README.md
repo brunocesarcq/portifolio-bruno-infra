@@ -1,23 +1,21 @@
-# Automação de Atualização do GLPI
+# Automação com Ansible
 
-Scripts para atualização segura do GLPI em ambientes Linux produtivos.
+Projeto voltado para automação de tarefas administrativas em servidores Linux.
 
 ## Objetivo
-Garantir atualização previsível, com backup e validação pós-upgrade.
+Padronizar rotinas, reduzir erro humano e permitir execução controlada em ambientes críticos.
 
 ## Tecnologias
-- Bash
+- Ansible
 - Linux
-- Apache / PHP
-- MySQL / MariaDB
-- GLPI
+- SSH
+- YAML
 
-## Fluxo
-1. Backup
-2. Atualização
-3. Validação
+## Estrutura
+- playbooks/
+- inventory/
 
 ## Boas Práticas
-- Backup obrigatório
-- Processo documentado
-- Execução controlada
+- Separação entre verificação e execução
+- Sem reboot automático
+- Evidências de execução
