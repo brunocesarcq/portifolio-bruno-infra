@@ -1,1 +1,5 @@
+# COMO EXECUTAR (REAL)
 
+ansible-playbook -i inventory/hosts.ini playbooks/check-updates.yml
+
+ansible-playbook -i inventory/hosts.ini playbooks/update-linux.yml
