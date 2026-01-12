@@ -1,6 +1,6 @@
 # Portfólio – Bruno César Costa Queiroz
 
-Profissional de Infraestrutura, Cloud e NOC com mais de 14 anos de experiência em ambientes corporativos, órgãos públicos e saúde.
+Profissional de Infraestrutura, Cloud e NOC com mais de 14 anos de experiência em ambientes corporativos, órgãos públicos, automação e saúde.
 
 Este repositório apresenta projetos práticos voltados para **automação**, **padronização de processos** e **operações seguras em ambientes críticos**.
 
